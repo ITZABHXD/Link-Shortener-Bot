@@ -26,7 +26,7 @@ print("Bot is Started Now")
 async def start(bot, message):
     await message.reply(
         f"**Hi {message.chat.first_name}!**\n\n"
-        "➣I'm Easysky Shortener bot.\n\n ➤Just send me link and get short link.\n\n**🧑‍💻 Developer:** @itzAbhixD 🇮🇳")
+        "➣𝗜'𝗺 𝗘𝗮𝘀𝘆𝘀𝗸𝘆 𝗦𝗵𝗼𝗿𝘁𝗲𝗻𝗲𝗿 𝗯𝗼𝘁.\n\n ➤𝗝𝘂𝘀𝘁 𝗦𝗲𝗻𝗱 𝗠𝗲 𝗟𝗼𝗻𝗴 𝗨𝗿𝗹 𝗔𝗻𝗱 𝗚𝗲𝘁 𝗦𝗵𝗼𝗿𝘁 𝗟𝗶𝗻𝗸 \n\n**🧑‍💻 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿:** @itzAbhixD 🇮🇳")
 
 
 @akbotz.on_message(filters.private & filters.text & filters.incoming)
@@ -39,7 +39,7 @@ async def link_handler(bot, message):
     for link in links:
         try:
             short_link = await get_shortlink(link)
-            await message.reply(f"➣𝐇𝐞𝐫𝐞 𝐢𝐬 𝐘𝐨𝐮𝐫 𝐒𝐡𝐨𝐫𝐭𝐞𝐧𝐞𝐝 𝐋𝐢𝐧𝐤\n\n➣𝐎𝐫𝐢𝐠𝐢𝐧𝐚𝐥 𝐋𝐢𝐧𝐤: {link}\n\n➤𝐒𝐡𝐨𝐫𝐭𝐞𝐧𝐞𝐝 𝐋𝐢𝐧𝐤: `{short_link}`",quote=True,disable_web_page_preview=True)
+            await message.reply(f"➣ 𝗛𝗲𝗿𝗲 𝗶𝘀 𝗬𝗼𝘂𝗿 𝗦𝗵𝗼𝗿𝘁𝗲𝗻𝗲𝗱 𝗟𝗶𝗻𝗸\n\n➣ 𝗢𝗿𝗶𝗴𝗶𝗻𝗮𝗹 𝗟𝗶𝗻𝗸 : {link}\n\n➤ 𝗦𝗵𝗼𝗿𝘁𝗲𝗻𝗲𝗱 𝗟𝗶𝗻𝗸: `{short_link}`",quote=True,disable_web_page_preview=True)
         except Exception as e:
             await message.reply(f'𝐄𝐫𝐫𝐨𝐫: `{e}`', quote=True)
 
